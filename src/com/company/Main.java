@@ -4,9 +4,27 @@ public class Main {
     public static void main(String[] args) {
         int number = 1;
 
-        printNumbers(number);
+        //printNumbers(number);
+        printNumbers2(number);
     }
+    public static void printNumbers2(int num) {
+        if (num <= 255) {
+            String output = "";
+            if (num % 3 == 0) {
+                output = output + "Fizz";
+            }
 
+            if (num % 5 == 0) {
+                output = output +"Buzz";
+            }
+
+            if (output.equals("")){
+                output =  Integer.toString(num);
+            }
+            System.out.println(output);
+            printNumbers2(num + 1);
+            }
+    }
     public static void printNumbers(int num) {
         if (num <= 255) {
 
